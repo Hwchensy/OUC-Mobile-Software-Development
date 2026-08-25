@@ -1,0 +1,29 @@
+<view class="page">
+
+<!-- 标题 -->
+<view class="title">
+  <view class="title-content {{animationClass}}">
+    <text>hello {{worlding}}! </text>
+
+    <text wx:if="{{worlding === 'girl'}}">👧</text>
+    <text wx:else>👦</text>
+  </view>
+</view>
+
+<!-- 图片 -->
+<view class="image-box">
+  <image
+    class="main-image"
+    mode="widthFix"
+    src="../../img/b5ce696092c74d777569ce5068aa1d7a.jpg">
+  </image>
+</view>
+
+<!-- 按钮 -->
+<button
+  class="change-button"
+  bindtap="onClick">
+  点击
+</button>
+
+</view>

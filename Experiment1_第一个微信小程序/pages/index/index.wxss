@@ -1,0 +1,94 @@
+/* 整个页面 */
+.page {
+  min-height: 100vh;
+  padding: 40rpx;
+  box-sizing: border-box;
+  background: #f5f6fa;
+}
+
+/* 标题区域 */
+.title {
+  width: 100%;
+  text-align: center;
+  margin-top: 80rpx;
+  margin-bottom: 60rpx;
+}
+
+/* 标题 */
+.title-content {
+  display: inline-block;
+  font-size: 48rpx;
+  font-weight: bold;
+  color: #333333;
+  
+  /* 非常重要 */
+  transform: scale(1);
+  opacity: 1;
+}
+
+/* 点击以后：缩小 + 淡出 */
+.animate-out {
+  animation: disappear 0.3s ease-in forwards;
+}
+
+/* 切换以后：放大 + 淡入 */
+.animate-in {
+  animation: appear 0.4s ease-out forwards;
+}
+
+/* 消失动画 */
+@keyframes disappear {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+
+  100% {
+    transform: scale(0.5);
+    opacity: 0;
+  }
+}
+
+/* 出现动画 */
+@keyframes appear {
+  0% {
+    transform: scale(0.5);
+    opacity: 0;
+  }
+
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* 图片区域 */
+.image-box {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* 图片 */
+.main-image {
+  width: 90%;
+  border-radius: 24rpx;
+  box-shadow: 0 10rpx 30rpx rgba(0, 0, 0, 0.15);
+}
+
+/* 黄色按钮 */
+button {
+  width: 60%;
+  margin: 50rpx auto;
+  border-radius: 50rpx;
+  background-color: #F6D365;
+  color: white;
+  font-size: 32rpx;
+  box-shadow: 0 8rpx 20rpx rgba(0, 0, 0, 0.15);
+}
+/* 点击按钮时 */
+button:active {
+  transform: scale(0.96);
+  opacity: 0.85;
+}
