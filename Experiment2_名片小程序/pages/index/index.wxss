@@ -1,0 +1,548 @@
+page {
+  background: #f2f8fc;
+}
+
+.page {
+  min-height: 100vh;
+  background: #f2f8fc;
+  color: #173f59;
+  padding-bottom: 60rpx;
+  box-sizing: border-box;
+}
+
+
+/* =========================
+   顶部个人名片
+   ========================= */
+
+.hero {
+  padding: 30rpx 30rpx 0;
+  box-sizing: border-box;
+}
+
+.business-card {
+  width: 106%;
+  margin-left: -3%;
+  display: block;
+  border-radius: 24rpx;
+  box-shadow: 0 14rpx 40rpx rgba(25, 90, 130, 0.15);
+}
+
+.hero-text {
+  padding: 40rpx 10rpx 20rpx;
+}
+
+.hero-en {
+  display: block;
+  color: #368dbd;
+  font-size: 22rpx;
+  letter-spacing: 6rpx;
+  font-weight: bold;
+}
+
+.hero-title {
+  display: block;
+  color: #123f5c;
+  font-size: 46rpx;
+  font-weight: bold;
+  margin-top: 10rpx;
+}
+
+.hero-subtitle {
+  display: block;
+  color: #6b899a;
+  font-size: 25rpx;
+  line-height: 1.6;
+  margin-top: 15rpx;
+}
+
+.hero-slogan {
+  display: block;
+  color: #2877a3;
+  font-size: 28rpx;
+  margin-top: 22rpx;
+  font-weight: 500;
+}
+
+
+/* =========================
+   通用 Section
+   ========================= */
+
+.section {
+  margin: 45rpx 35rpx 0;
+}
+
+.section-head {
+  margin-bottom: 25rpx;
+}
+
+.section-en {
+  display: block;
+  color: #4b9ac5;
+  font-size: 20rpx;
+  letter-spacing: 5rpx;
+  font-weight: bold;
+}
+
+.section-title {
+  display: block;
+  color: #173e58;
+  font-size: 37rpx;
+  font-weight: bold;
+  margin-top: 6rpx;
+}
+
+.title-line {
+  width: 55rpx;
+  height: 5rpx;
+  background: #3c94c5;
+  margin-top: 15rpx;
+  border-radius: 10rpx;
+}
+
+
+/* =========================
+   关于我
+   ========================= */
+
+.about-card {
+  background: #ffffff;
+  border-radius: 25rpx;
+  padding: 35rpx;
+  box-shadow: 0 8rpx 30rpx rgba(40, 100, 135, 0.08);
+}
+
+.about-header {
+  display: block;
+  margin-bottom: 30rpx;
+}
+
+.about-name {
+  margin-left: 0;
+}
+
+.name {
+  display: block;
+  font-size: 43rpx;
+  font-weight: bold;
+  color: #173f59;
+}
+
+.name-en {
+  display: block;
+  font-size: 18rpx;
+  color: #86a0ae;
+  margin-top: 7rpx;
+}
+
+.school-small {
+  display: block;
+  font-size: 21rpx;
+  color: #6c94a9;
+  margin-top: 7rpx;
+}
+
+.about-text {
+  display: block;
+  font-size: 27rpx;
+  color: #587283;
+  line-height: 1.9;
+  margin-top: 20rpx;
+}
+
+
+/* =========================
+   我的专业
+   ========================= */
+
+.major-card {
+  display: flex;
+  background: #176c9f;
+  border-radius: 25rpx;
+  padding: 35rpx;
+  color: #ffffff;
+  box-shadow: 0 12rpx 30rpx rgba(23, 108, 159, 0.2);
+}
+
+.major-number {
+  font-size: 42rpx;
+  font-weight: bold;
+  opacity: 0.6;
+  margin-right: 25rpx;
+}
+
+.major-content {
+  flex: 1;
+}
+
+.major-title {
+  display: block;
+  font-size: 34rpx;
+  font-weight: bold;
+}
+
+.major-desc {
+  display: block;
+  font-size: 25rpx;
+  line-height: 1.8;
+  margin-top: 15rpx;
+  opacity: 0.85;
+}
+
+.major-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-top: 20rpx;
+}
+
+.major-item {
+  width: 48%;
+  background: #ffffff;
+  border-radius: 22rpx;
+  padding: 30rpx 25rpx;
+  margin-bottom: 20rpx;
+  box-sizing: border-box;
+  box-shadow: 0 6rpx 25rpx rgba(40, 100, 135, 0.07);
+}
+
+.major-number-small {
+  display: block;
+  color: #4b9ac5;
+  font-size: 22rpx;
+  font-weight: bold;
+  letter-spacing: 2rpx;
+}
+
+.major-item-title {
+  display: block;
+  font-size: 29rpx;
+  font-weight: bold;
+  color: #244c65;
+  margin-top: 14rpx;
+}
+
+.major-item-desc {
+  display: block;
+  font-size: 22rpx;
+  color: #8299a6;
+  line-height: 1.6;
+  margin-top: 8rpx;
+}
+
+
+/* =========================
+   学习方向
+   ========================= */
+
+.direction-card {
+  background: #ffffff;
+  border-radius: 25rpx;
+  padding: 30rpx;
+  box-shadow: 0 8rpx 30rpx rgba(40, 100, 135, 0.08);
+}
+
+.direction-item {
+  display: flex;
+  padding: 25rpx 0;
+  border-bottom: 1rpx solid #edf3f6;
+}
+
+.direction-item.last {
+  border-bottom: none;
+}
+
+.direction-dot {
+  width: 16rpx;
+  height: 16rpx;
+  background: #3b94c4;
+  border-radius: 50%;
+  margin: 8rpx 25rpx 0 5rpx;
+  flex-shrink: 0;
+}
+
+.direction-content {
+  flex: 1;
+}
+
+.direction-title {
+  display: block;
+  font-size: 29rpx;
+  color: #244c65;
+  font-weight: bold;
+}
+
+.direction-desc {
+  display: block;
+  font-size: 24rpx;
+  color: #78909e;
+  line-height: 1.8;
+  margin-top: 8rpx;
+}
+
+
+/* =========================
+   校园经历
+   ========================= */
+
+.timeline {
+  background: #ffffff;
+  border-radius: 25rpx;
+  padding: 25rpx 30rpx;
+  box-shadow: 0 8rpx 30rpx rgba(40, 100, 135, 0.08);
+}
+
+.timeline-item {
+  display: flex;
+  position: relative;
+  padding: 20rpx 0 35rpx;
+}
+
+.timeline-item.last {
+  padding-bottom: 15rpx;
+}
+
+.timeline-left {
+  width: 75rpx;
+  position: relative;
+  flex-shrink: 0;
+}
+
+.timeline-number {
+  font-size: 20rpx;
+  color: #4b9ac5;
+  font-weight: bold;
+}
+
+.timeline-dot {
+  width: 14rpx;
+  height: 14rpx;
+  background: #398fc0;
+  border-radius: 50%;
+  position: absolute;
+  top: 42rpx;
+  left: 5rpx;
+}
+
+.timeline-item:not(.last) .timeline-left::after {
+  content: "";
+  position: absolute;
+  width: 2rpx;
+  background: #c8e4f2;
+  left: 11rpx;
+  top: 58rpx;
+  bottom: -5rpx;
+}
+
+.timeline-content {
+  flex: 1;
+  padding-left: 10rpx;
+}
+
+.timeline-title {
+  display: block;
+  font-size: 30rpx;
+  font-weight: bold;
+  color: #244c65;
+}
+
+.timeline-desc {
+  display: block;
+  font-size: 24rpx;
+  color: #78909e;
+  line-height: 1.8;
+  margin-top: 10rpx;
+}
+
+
+/* =========================
+   兴趣爱好
+   ========================= */
+
+.interest-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.interest-card {
+  background: #ffffff;
+  border-radius: 24rpx;
+  padding: 30rpx;
+  display: flex;
+  align-items: center;
+  margin-bottom: 20rpx;
+  box-shadow: 0 7rpx 25rpx rgba(40, 100, 135, 0.07);
+}
+
+.interest-icon {
+  width: 90rpx;
+  height: 90rpx;
+  border-radius: 22rpx;
+  background: #e2f2fa;
+  color: #3189b8;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  font-size: 42rpx;
+}
+
+.interest-content {
+  flex: 1;
+  margin-left: 25rpx;
+}
+
+.interest-title {
+  display: block;
+  color: #244c65;
+  font-size: 31rpx;
+  font-weight: bold;
+}
+
+.interest-desc {
+  display: block;
+  color: #78909e;
+  font-size: 23rpx;
+  line-height: 1.7;
+  margin-top: 8rpx;
+}
+
+
+/* =========================
+   我的关键词
+   ========================= */
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.tag {
+  background: #ffffff;
+  color: #347da8;
+  padding: 14rpx 25rpx;
+  border-radius: 50rpx;
+  font-size: 24rpx;
+  margin-right: 15rpx;
+  margin-bottom: 18rpx;
+  box-shadow: 0 5rpx 15rpx rgba(40, 100, 135, 0.06);
+}
+
+.tag-main {
+  background: #d9eef8;
+  color: #1e6b98;
+  font-weight: bold;
+}
+
+
+/* =========================
+   联系我
+   ========================= */
+
+.contact-card {
+  background: #155f8e;
+  border-radius: 28rpx;
+  padding: 40rpx;
+  color: #ffffff;
+  box-shadow: 0 15rpx 35rpx rgba(20, 90, 135, 0.2);
+}
+
+.contact-name {
+  display: block;
+  font-size: 45rpx;
+  font-weight: bold;
+}
+
+.contact-school {
+  display: block;
+  font-size: 24rpx;
+  margin-top: 10rpx;
+  opacity: 0.8;
+  line-height: 1.6;
+}
+
+.contact-line {
+  height: 1rpx;
+  background: rgba(255, 255, 255, 0.3);
+  margin: 30rpx 0;
+}
+
+.contact-item {
+  margin-top: 20rpx;
+}
+
+.contact-label {
+  display: block;
+  font-size: 18rpx;
+  letter-spacing: 3rpx;
+  opacity: 0.65;
+}
+
+.contact-value {
+  display: block;
+  font-size: 27rpx;
+  margin-top: 5rpx;
+  line-height: 1.6;
+}
+
+.contact-btn {
+  margin: 35rpx 0 0;
+  width: 100%;
+  height: 85rpx;
+  line-height: 85rpx;
+  border-radius: 50rpx;
+  background: #ffffff;
+  color: #17628f;
+  font-size: 27rpx;
+}
+
+.contact-btn::after {
+  border: none;
+}
+
+
+/* =========================
+   页脚
+   ========================= */
+
+.footer {
+  text-align: center;
+  padding: 70rpx 30rpx 30rpx;
+}
+
+.footer-wave {
+  color: #6aaed1;
+  font-size: 30rpx;
+  letter-spacing: 10rpx;
+}
+
+.footer-name {
+  display: block;
+  font-size: 34rpx;
+  font-weight: bold;
+  color: #285a76;
+  margin-top: 20rpx;
+}
+
+.footer-school {
+  display: block;
+  font-size: 23rpx;
+  color: #7d98a7;
+  margin-top: 8rpx;
+}
+
+.footer-en {
+  display: block;
+  font-size: 17rpx;
+  color: #a3b8c4;
+  letter-spacing: 3rpx;
+  margin-top: 12rpx;
+}
+
+.footer-motto {
+  display: block;
+  font-size: 18rpx;
+  color: #9bb2bf;
+  margin-top: 20rpx;
+}

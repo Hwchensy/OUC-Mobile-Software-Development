@@ -1,0 +1,17 @@
+{
+  "pages": [
+    "pages/index/index"
+  ],
+
+  "window": {
+    "navigationBarTitleText": "傅歌 · 个人名片",
+    "navigationBarBackgroundColor": "#f2f8fc",
+    "navigationBarTextStyle": "black",
+    "backgroundColor": "#f2f8fc",
+    "backgroundTextStyle": "light"
+  },
+
+  "style": "v2",
+
+  "sitemapLocation": "sitemap.json"
+}

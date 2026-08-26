@@ -1,0 +1,733 @@
+<view class="page">
+
+<!-- =========================
+     顶部个人名片
+     ========================= -->
+<view class="hero">
+
+  <image
+    class="business-card"
+    mode="widthFix"
+    src="../../img/ChatGPT Image 2026年8月25日 09_37_54.png"
+  ></image>
+
+  <view class="hero-text">
+
+    <text class="hero-en">
+      HELLO, I'M FUGE
+    </text>
+
+    <text class="hero-title">
+      你好，我是傅歌
+    </text>
+
+    <text class="hero-subtitle">
+      中国海洋大学 · 信息学部 · 计算机科学与技术
+    </text>
+  </view>
+
+</view>
+
+
+<!-- =========================
+     关于我
+     ========================= -->
+<view class="section">
+
+  <view class="section-head">
+
+    <text class="section-en">
+      ABOUT ME
+    </text>
+
+    <text class="section-title">
+      关于我
+    </text>
+
+    <view class="title-line"></view>
+
+  </view>
+
+
+  <view class="about-card">
+
+    <view class="about-header">
+
+      <view class="about-name">
+
+        <text class="name">
+          傅歌
+        </text>
+
+        <text class="name-en">
+          Computer Science &amp; Technology
+        </text>
+
+        <text class="school-small">
+          Ocean University of China
+        </text>
+
+      </view>
+
+    </view>
+
+
+    <text class="about-text">
+      我是傅歌，目前就读于中国海洋大学信息学部，
+      专业是计算机科学与技术。
+    </text>
+
+    <text class="about-text">
+      我对计算机技术有着浓厚的兴趣，喜欢通过编程
+      把一个具体的问题拆解、分析，再一步一步转化
+      成可以运行的程序。
+    </text>
+
+    <text class="about-text">
+      在大学的学习过程中，我希望不断积累专业知识，
+      同时通过课程实验和实际项目提高实践能力，
+      逐渐找到自己真正感兴趣的技术方向。
+    </text>
+
+  </view>
+
+</view>
+
+
+<!-- =========================
+     我的专业
+     ========================= -->
+<view class="section">
+
+  <view class="section-head">
+
+    <text class="section-en">
+      MY MAJOR
+    </text>
+
+    <text class="section-title">
+      我的专业
+    </text>
+
+    <view class="title-line"></view>
+
+  </view>
+
+
+  <!-- 专业主卡片 -->
+  <view class="major-card">
+
+    <view class="major-number">
+      
+    </view>
+
+    <view class="major-content">
+
+      <text class="major-title">
+        计算机科学与技术
+      </text>
+
+      <text class="major-desc">
+        从程序设计、数据结构和算法开始，
+        逐步理解计算机系统以及软件开发的基本思想。
+      </text>
+
+    </view>
+
+  </view>
+
+
+  <!-- 专业方向 -->
+  <view class="major-grid">
+
+    <view class="major-item">
+
+      <text class="major-number-small">
+        01
+      </text>
+
+      <text class="major-item-title">
+        程序设计
+      </text>
+
+      <text class="major-item-desc">
+        用代码解决实际问题
+      </text>
+
+    </view>
+
+
+    <view class="major-item">
+
+      <text class="major-number-small">
+        02
+      </text>
+
+      <text class="major-item-title">
+        数据结构
+      </text>
+
+      <text class="major-item-desc">
+        学习数据的组织与处理
+      </text>
+
+    </view>
+
+
+    <view class="major-item">
+
+      <text class="major-number-small">
+        03
+      </text>
+
+      <text class="major-item-title">
+        算法
+      </text>
+
+      <text class="major-item-desc">
+        思考更加高效的问题解决方法
+      </text>
+
+    </view>
+
+
+    <view class="major-item">
+
+      <text class="major-number-small">
+        04
+      </text>
+
+      <text class="major-item-title">
+        软件开发
+      </text>
+
+      <text class="major-item-desc">
+        将想法真正变成可以运行的作品
+      </text>
+
+    </view>
+
+  </view>
+
+</view>
+
+
+<!-- =========================
+     学习方向
+     ========================= -->
+<view class="section">
+
+  <view class="section-head">
+
+    <text class="section-en">
+      MY DIRECTION
+    </text>
+
+    <text class="section-title">
+      我的学习方向
+    </text>
+
+    <view class="title-line"></view>
+
+  </view>
+
+
+  <view class="direction-card">
+
+    <view class="direction-item">
+
+      <view class="direction-dot"></view>
+
+      <view class="direction-content">
+
+        <text class="direction-title">
+          编程基础
+        </text>
+
+        <text class="direction-desc">
+          学习 C、C++、Python 等编程语言，
+          培养良好的程序设计习惯和代码思维。
+        </text>
+
+      </view>
+
+    </view>
+
+
+    <view class="direction-item">
+
+      <view class="direction-dot"></view>
+
+      <view class="direction-content">
+
+        <text class="direction-title">
+          算法与数据结构
+        </text>
+
+        <text class="direction-desc">
+          通过算法训练提高分析问题、
+          拆解问题和解决问题的能力。
+        </text>
+
+      </view>
+
+    </view>
+
+
+    <view class="direction-item">
+
+      <view class="direction-dot"></view>
+
+      <view class="direction-content">
+
+        <text class="direction-title">
+          软件开发
+        </text>
+
+        <text class="direction-desc">
+          将课堂知识运用到小程序和实际项目中，
+          在实践中不断发现问题并解决问题。
+        </text>
+
+      </view>
+
+    </view>
+
+
+    <view class="direction-item last">
+
+      <view class="direction-dot"></view>
+
+      <view class="direction-content">
+
+        <text class="direction-title">
+          新技术探索
+        </text>
+
+        <text class="direction-desc">
+          保持对新技术的好奇心，
+          尝试了解人工智能、Web 开发等不同方向。
+        </text>
+
+      </view>
+
+    </view>
+
+  </view>
+
+</view>
+
+
+<!-- =========================
+     校园经历
+     ========================= -->
+<view class="section">
+
+  <view class="section-head">
+
+    <text class="section-en">
+      CAMPUS LIFE
+    </text>
+
+    <text class="section-title">
+      校园经历
+    </text>
+
+    <view class="title-line"></view>
+
+  </view>
+
+
+  <view class="timeline">
+
+    <view class="timeline-item">
+
+      <view class="timeline-left">
+
+        <text class="timeline-number">
+          01
+        </text>
+
+        <view class="timeline-dot"></view>
+
+      </view>
+
+
+      <view class="timeline-content">
+
+        <text class="timeline-title">
+          进入中国海洋大学
+        </text>
+
+        <text class="timeline-desc">
+          来到西海岸校区，开始接触计算机科学与技术专业，
+          逐渐建立起对计算机专业的认识。
+        </text>
+
+      </view>
+
+    </view>
+
+
+    <view class="timeline-item">
+
+      <view class="timeline-left">
+
+        <text class="timeline-number">
+          02
+        </text>
+
+        <view class="timeline-dot"></view>
+
+      </view>
+
+
+      <view class="timeline-content">
+
+        <text class="timeline-title">
+          专业课程学习
+        </text>
+
+        <text class="timeline-desc">
+          学习程序设计、数据结构、算法等专业课程，
+          从最基础的代码开始，逐渐理解计算机解决问题的方式。
+        </text>
+
+      </view>
+
+    </view>
+
+
+    <view class="timeline-item">
+
+      <view class="timeline-left">
+
+        <text class="timeline-number">
+          03
+        </text>
+
+        <view class="timeline-dot"></view>
+
+      </view>
+
+
+      <view class="timeline-content">
+
+        <text class="timeline-title">
+          从课堂走向实践
+        </text>
+
+        <text class="timeline-desc">
+          通过课程实验和小程序开发，
+          把课堂中学习到的知识转化成实际作品，
+          在动手实践中发现问题、解决问题。
+        </text>
+
+      </view>
+
+    </view>
+
+
+    <view class="timeline-item last">
+
+      <view class="timeline-left">
+
+        <text class="timeline-number">
+          04
+        </text>
+
+        <view class="timeline-dot"></view>
+
+      </view>
+
+
+      <view class="timeline-content">
+
+        <text class="timeline-title">
+          持续探索
+        </text>
+
+        <text class="timeline-desc">
+          在学习专业知识的同时，也尝试了解不同的技术方向，
+          希望不断拓展自己的知识边界。
+        </text>
+
+      </view>
+
+    </view>
+
+  </view>
+
+</view>
+
+
+<!-- =========================
+     兴趣爱好
+     ========================= -->
+<view class="section">
+
+  <view class="section-head">
+
+    <text class="section-en">
+      MY INTERESTS
+    </text>
+
+    <text class="section-title">
+      我的兴趣
+    </text>
+
+    <view class="title-line"></view>
+
+  </view>
+
+
+  <view class="interest-list">
+
+    <view class="interest-card">
+
+      <view class="interest-icon">
+        <text>✈</text>
+      </view>
+
+      <view class="interest-content">
+
+        <text class="interest-title">
+          旅游
+        </text>
+
+        <text class="interest-desc">
+          去不同的地方走走，在旅途中感受不同的风景，
+          也让自己从日常的学习节奏中暂时抽离出来。
+        </text>
+
+      </view>
+
+    </view>
+
+
+    <view class="interest-card">
+
+      <view class="interest-icon">
+        <text>◉</text>
+      </view>
+
+      <view class="interest-content">
+
+        <text class="interest-title">
+          摄影
+        </text>
+
+        <text class="interest-desc">
+          用镜头记录旅途和生活中的瞬间，
+          把一些值得记住的风景保存下来。
+        </text>
+
+      </view>
+
+    </view>
+
+
+    <view class="interest-card">
+
+      <view class="interest-icon">
+        <text>◇</text>
+      </view>
+
+      <view class="interest-content">
+
+        <text class="interest-title">
+          滑雪
+        </text>
+
+        <text class="interest-desc">
+          喜欢滑雪带来的速度感和挑战，
+          在不断尝试中寻找突破自己的感觉。
+        </text>
+
+      </view>
+
+    </view>
+
+  </view>
+
+</view>
+
+
+<!-- =========================
+     我的关键词
+     ========================= -->
+<view class="section">
+
+  <view class="section-head">
+
+    <text class="section-en">
+      MY TAGS
+    </text>
+
+    <text class="section-title">
+      我的关键词
+    </text>
+
+    <view class="title-line"></view>
+
+  </view>
+
+
+  <view class="tags">
+
+
+    <view class="tag">
+      编程
+    </view>
+
+    <view class="tag">
+      算法
+    </view>
+
+    <view class="tag">
+      探索
+    </view>
+
+    <view class="tag">
+      实践
+    </view>
+
+    <view class="tag">
+      学习
+    </view>
+
+    <view class="tag">
+      成长
+    </view>
+
+    <view class="tag">
+      旅游
+    </view>
+
+    <view class="tag">
+      摄影
+    </view>
+
+    <view class="tag">
+      滑雪
+    </view>
+
+  </view>
+
+</view>
+
+
+<!-- =========================
+     联系我
+     ========================= -->
+<view class="section">
+
+  <view class="section-head">
+
+    <text class="section-en">
+      CONTACT ME
+    </text>
+
+    <text class="section-title">
+      联系我
+    </text>
+
+    <view class="title-line"></view>
+
+  </view>
+
+
+  <view class="contact-card">
+
+    <text class="contact-name">
+      傅歌
+    </text>
+
+    <text class="contact-school">
+      中国海洋大学 · 信息学部 · 计算机科学与技术
+    </text>
+
+
+    <view class="contact-line"></view>
+
+
+    <view class="contact-item">
+
+      <text class="contact-label">
+        PHONE
+      </text>
+
+      <text class="contact-value">
+        17701290859
+      </text>
+
+    </view>
+
+
+    <view class="contact-item">
+
+      <text class="contact-label">
+        E-MAIL
+      </text>
+
+      <text class="contact-value">
+        3592279877@qq.com
+      </text>
+
+    </view>
+
+
+    <view class="contact-item">
+
+      <text class="contact-label">
+        ADDRESS
+      </text>
+
+      <text class="contact-value">
+        西海岸校区 · 听海苑6号楼
+      </text>
+
+    </view>
+
+
+    <button
+      class="contact-btn"
+      bindtap="copyEmail"
+    >
+      复制我的邮箱
+    </button>
+
+  </view>
+
+</view>
+
+
+<!-- =========================
+     页脚
+     ========================= -->
+<view class="footer">
+
+  <view class="footer-wave">
+    ≋ ≋ ≋ ≋ ≋
+  </view>
+
+  <text class="footer-name">
+    傅歌
+  </text>
+
+  <text class="footer-school">
+    中国海洋大学 · 信息学部
+  </text>
+
+  <text class="footer-en">
+    OCEAN UNIVERSITY OF CHINA
+  </text>
+
+  <text class="footer-motto">
+    Keep learning · Keep exploring · Keep creating
+  </text>
+
+</view>
+
+
+</view>
