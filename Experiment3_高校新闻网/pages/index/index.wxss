@@ -1,0 +1,467 @@
+/* =========================
+   页面
+   ========================= */
+
+   page {
+    background-color: #f5f7fa;
+  }
+  
+  
+  /* =========================
+     顶部标题
+     ========================= */
+  
+  .page-title {
+    height: 110rpx;
+  
+    padding: 25rpx 30rpx 10rpx;
+  
+    box-sizing: border-box;
+  
+    background-color: white;
+  
+    display: flex;
+  
+    flex-direction: column;
+  
+    justify-content: center;
+  }
+  
+  
+  .main-title {
+    font-size: 38rpx;
+  
+    font-weight: bold;
+  
+    color: #222222;
+  
+    line-height: 50rpx;
+  }
+  
+  
+  .sub-title {
+    font-size: 18rpx;
+  
+    color: #328EEB;
+  
+    letter-spacing: 4rpx;
+  
+    line-height: 25rpx;
+  }
+  
+  
+  /* =========================
+     轮播图
+     ========================= */
+  
+  .swiper {
+    width: 100%;
+  
+    height: 390rpx;
+  
+    background-color: white;
+  }
+  
+  
+  .swiper-image {
+    width: 100%;
+  
+    height: 390rpx;
+  }
+  
+  
+  /* =========================
+     搜索框
+     ========================= */
+  
+  .search-box {
+  
+    height: 82rpx;
+  
+    margin: 25rpx 25rpx 20rpx;
+  
+    padding: 0 10rpx 0 25rpx;
+  
+    box-sizing: border-box;
+  
+    background-color: white;
+  
+    border-radius: 45rpx;
+  
+    display: flex;
+  
+    align-items: center;
+  
+    box-shadow: 0 4rpx 18rpx rgba(0,0,0,0.06);
+  }
+  
+  
+  /* 搜索图标 */
+  
+  .search-icon {
+  
+    width: 45rpx;
+  
+    font-size: 42rpx;
+  
+    color: #888888;
+  
+    line-height: 45rpx;
+  
+    text-align: center;
+  
+    transform: rotate(-20deg);
+  }
+  
+  
+  /* 输入框 */
+  
+  .search-input {
+  
+    flex: 1;
+  
+    height: 70rpx;
+  
+    padding: 0 15rpx;
+  
+    box-sizing: border-box;
+  
+    font-size: 27rpx;
+  
+    color: #333333;
+  }
+  
+  
+  /* 搜索按钮 */
+  
+  .search-button {
+  
+    width: 110rpx;
+  
+    height: 60rpx;
+  
+    padding: 0;
+  
+    margin: 0;
+  
+    line-height: 60rpx;
+  
+    border-radius: 30rpx;
+  
+    background-color: #328EEB;
+  
+    color: white;
+  
+    font-size: 24rpx;
+  }
+  
+  
+  .search-button::after {
+    border: none;
+  }
+  
+  
+  /* =========================
+     分类导航
+     ========================= */
+  
+  .category-scroll {
+  
+    width: 100%;
+  
+    height: 80rpx;
+  
+    white-space: nowrap;
+  
+    background-color: white;
+  }
+  
+  
+  .category-list {
+  
+    height: 80rpx;
+  
+    display: flex;
+  
+    flex-direction: row;
+  
+    align-items: center;
+  
+    padding: 0 25rpx;
+  }
+  
+  
+  .category-item {
+  
+    height: 55rpx;
+  
+    line-height: 55rpx;
+  
+    padding: 0 28rpx;
+  
+    margin-right: 15rpx;
+  
+    border-radius: 30rpx;
+  
+    color: #777777;
+  
+    background-color: #f5f6f8;
+  
+    font-size: 25rpx;
+  
+    white-space: nowrap;
+  }
+  
+  
+  /* 当前分类 */
+  
+  .category-item.active {
+  
+    background-color: #328EEB;
+  
+    color: white;
+  
+    font-weight: bold;
+  }
+  
+  
+  /* =========================
+     热门新闻
+     ========================= */
+  
+  .hot-header {
+  
+    height: 105rpx;
+  
+    margin: 20rpx 25rpx 0;
+  
+    display: flex;
+  
+    flex-direction: row;
+  
+    align-items: center;
+  
+    justify-content: space-between;
+  }
+  
+  
+  .hot-title {
+  
+    display: block;
+  
+    font-size: 36rpx;
+  
+    font-weight: bold;
+  
+    color: #222222;
+  
+    line-height: 45rpx;
+  }
+  
+  
+  .hot-subtitle {
+  
+    display: block;
+  
+    margin-top: 2rpx;
+  
+    font-size: 18rpx;
+  
+    color: #328EEB;
+  
+    letter-spacing: 3rpx;
+  
+    line-height: 25rpx;
+  }
+  
+  
+  .hot-count {
+  
+    font-size: 23rpx;
+  
+    color: #999999;
+  }
+  
+  
+  /* =========================
+     新闻列表
+     ========================= */
+  
+  .news-list {
+  
+    margin: 0 20rpx 30rpx;
+  
+    padding: 0 20rpx;
+  
+    background-color: white;
+  
+    border-radius: 20rpx;
+  
+    box-shadow: 0 3rpx 15rpx rgba(0,0,0,0.04);
+  }
+  
+  
+  /* 新闻项目 */
+  
+  .news-item {
+  
+    min-height: 180rpx;
+  
+    padding: 20rpx 0;
+  
+    box-sizing: border-box;
+  
+    display: flex;
+  
+    flex-direction: row;
+  
+    align-items: center;
+  
+    border-bottom: 1rpx solid #eeeeee;
+  }
+  
+  
+  .news-item:last-child {
+  
+    border-bottom: none;
+  }
+  
+  
+  /* 新闻图片 */
+  
+  .news-image {
+  
+    width: 210rpx;
+  
+    height: 140rpx;
+  
+    border-radius: 12rpx;
+  
+    flex-shrink: 0;
+  
+    background-color: #eeeeee;
+  }
+  
+  
+  /* 新闻信息 */
+  
+  .news-info {
+  
+    flex: 1;
+  
+    min-width: 0;
+  
+    height: 140rpx;
+  
+    margin-left: 20rpx;
+  
+    display: flex;
+  
+    flex-direction: column;
+  
+    justify-content: space-between;
+  }
+  
+  
+  /* 新闻标题 */
+  
+  .news-item-title {
+  
+    font-size: 27rpx;
+  
+    color: #333333;
+  
+    line-height: 42rpx;
+  
+    display: -webkit-box;
+  
+    -webkit-box-orient: vertical;
+  
+    -webkit-line-clamp: 2;
+  
+    overflow: hidden;
+  }
+  
+  
+  /* 新闻底部 */
+  
+  .news-bottom {
+  
+    display: flex;
+  
+    flex-direction: row;
+  
+    align-items: center;
+  
+    justify-content: space-between;
+  }
+  
+  
+  /* 日期 */
+  
+  .news-date {
+  
+    font-size: 21rpx;
+  
+    color: #999999;
+  
+    line-height: 30rpx;
+  }
+  
+  
+  /* 阅读全文 */
+  
+  .read-more {
+  
+    font-size: 21rpx;
+  
+    color: #328EEB;
+  
+    line-height: 30rpx;
+  }
+  
+  
+  /* =========================
+     搜索无结果
+     ========================= */
+  
+  .empty-search {
+  
+    height: 350rpx;
+  
+    display: flex;
+  
+    flex-direction: column;
+  
+    align-items: center;
+  
+    justify-content: center;
+  }
+  
+  
+  .empty-icon {
+  
+    font-size: 55rpx;
+  
+    margin-bottom: 15rpx;
+  }
+  
+  
+  .empty-title {
+  
+    font-size: 28rpx;
+  
+    font-weight: bold;
+  
+    color: #555555;
+  }
+  
+  
+  .empty-desc {
+  
+    margin-top: 10rpx;
+  
+    font-size: 22rpx;
+  
+    color: #aaaaaa;
+  }

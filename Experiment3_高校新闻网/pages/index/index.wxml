@@ -1,0 +1,216 @@
+<!-- pages/index/index.wxml -->
+
+<!-- =========================
+     顶部标题
+     ========================= -->
+
+     <view class="page-title">
+  <text class="main-title">我的新闻网</text>
+  <text class="sub-title">CAMPUS NEWS</text>
+</view>
+
+
+<!-- =========================
+     轮播图
+     ========================= -->
+
+<swiper
+  class="swiper"
+  indicator-dots="true"
+  indicator-active-color="#328EEB"
+  autoplay="true"
+  interval="4000"
+  duration="500"
+>
+
+  <block
+    wx:for="{{swiperImg}}"
+    wx:key="src"
+  >
+
+    <swiper-item>
+
+      <image
+        class="swiper-image"
+        src="{{item.src}}"
+        mode="aspectFill"
+      ></image>
+
+    </swiper-item>
+
+  </block>
+
+</swiper>
+
+
+<!-- =========================
+     搜索框
+     ========================= -->
+
+<view class="search-box">
+
+  <text class="search-icon">⌕</text>
+
+  <input
+    class="search-input"
+    placeholder="搜索新闻"
+    value="{{keyword}}"
+    bindinput="onSearchInput"
+    confirm-type="search"
+    bindconfirm="searchNews"
+  />
+
+  <button
+    class="search-button"
+    bindtap="searchNews"
+  >
+    搜索
+  </button>
+
+</view>
+
+
+<!-- =========================
+     新闻分类
+     ========================= -->
+
+<scroll-view
+  class="category-scroll"
+  scroll-x="true"
+  show-scrollbar="false"
+>
+
+  <view class="category-list">
+
+    <view
+      class="category-item {{currentCategory == '全部' ? 'active' : ''}}"
+      data-category="全部"
+      bindtap="changeCategory"
+    >
+      推荐
+    </view>
+
+    <view
+      class="category-item {{currentCategory == '学校新闻' ? 'active' : ''}}"
+      data-category="学校新闻"
+      bindtap="changeCategory"
+    >
+      学校新闻
+    </view>
+
+    <view
+      class="category-item {{currentCategory == '媒体报道' ? 'active' : ''}}"
+      data-category="媒体报道"
+      bindtap="changeCategory"
+    >
+      媒体报道
+    </view>
+
+    <view
+      class="category-item {{currentCategory == '活动' ? 'active' : ''}}"
+      data-category="活动"
+      bindtap="changeCategory"
+    >
+      活动
+    </view>
+
+  </view>
+
+</scroll-view>
+
+
+<!-- =========================
+     热门新闻标题
+     ========================= -->
+
+<view class="hot-header">
+
+  <view>
+
+    <text class="hot-title">
+      热门新闻
+    </text>
+
+    <text class="hot-subtitle">
+      HOT NEWS
+    </text>
+
+  </view>
+
+  <text class="hot-count">
+    {{newsList.length}} 条
+  </text>
+
+</view>
+
+
+<!-- =========================
+     新闻列表
+     ========================= -->
+
+<view class="news-list">
+
+  <view
+    class="news-item"
+    wx:for="{{newsList}}"
+    wx:key="id"
+    bindtap="goToDetail"
+    data-id="{{item.id}}"
+  >
+
+    <!-- 新闻图片 -->
+    <image
+      class="news-image"
+      src="{{item.poster}}"
+      mode="aspectFill"
+    ></image>
+
+
+    <!-- 新闻内容 -->
+    <view class="news-info">
+
+      <text class="news-item-title">
+        {{item.title}}
+      </text>
+
+      <view class="news-bottom">
+
+        <text class="news-date">
+          {{item.add_date}}
+        </text>
+
+        <text class="read-more">
+          阅读全文 ›
+        </text>
+
+      </view>
+
+    </view>
+
+  </view>
+
+
+  <!-- =========================
+       没有搜索结果
+       ========================= -->
+
+  <view
+    wx:if="{{newsList.length == 0}}"
+    class="empty-search"
+  >
+
+    <text class="empty-icon">
+      🔍
+    </text>
+
+    <text class="empty-title">
+      没有找到相关新闻
+    </text>
+
+    <text class="empty-desc">
+      请尝试其他关键词
+    </text>
+
+  </view>
+
+</view>

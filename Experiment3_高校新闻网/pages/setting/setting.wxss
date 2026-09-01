@@ -1,0 +1,320 @@
+/* pages/setting/setting.wxss */
+
+page {
+  background-color: #f5f7fa;
+}
+
+
+/* =========================
+   整体页面
+   ========================= */
+
+.page {
+  min-height: 100vh;
+  padding: 35rpx 30rpx 60rpx;
+  box-sizing: border-box;
+}
+
+
+/* =========================
+   顶部
+   ========================= */
+
+.header {
+  padding: 15rpx 10rpx 35rpx;
+}
+
+.header-title {
+  display: block;
+
+  font-size: 48rpx;
+  font-weight: bold;
+
+  color: #222222;
+
+  line-height: 65rpx;
+}
+
+.header-subtitle {
+  display: block;
+
+  margin-top: 3rpx;
+
+  font-size: 20rpx;
+
+  color: #999999;
+
+  letter-spacing: 4rpx;
+}
+
+
+/* =========================
+   每一个分类
+   ========================= */
+
+.group {
+  margin-bottom: 30rpx;
+}
+
+.group-title {
+  display: block;
+
+  margin: 0 0 15rpx 10rpx;
+
+  font-size: 25rpx;
+
+  color: #888888;
+
+  line-height: 40rpx;
+}
+
+
+/* =========================
+   白色卡片
+   ========================= */
+
+.card {
+  width: 100%;
+
+  background-color: #ffffff;
+
+  border-radius: 20rpx;
+
+  overflow: hidden;
+
+  box-shadow: 0 5rpx 20rpx rgba(0, 0, 0, 0.04);
+}
+
+
+/* =========================
+   设置项目
+   ========================= */
+
+.setting-item {
+  min-height: 125rpx;
+
+  padding: 22rpx 25rpx;
+
+  box-sizing: border-box;
+
+  display: flex;
+
+  flex-direction: row;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  border-bottom: 1rpx solid #eeeeee;
+}
+
+.setting-item:last-child {
+  border-bottom: none;
+}
+
+
+/* =========================
+   左侧内容
+   ========================= */
+
+.item-left {
+  display: flex;
+
+  flex-direction: row;
+
+  align-items: center;
+
+  flex: 1;
+
+  min-width: 0;
+}
+
+
+/* =========================
+   图标
+   ========================= */
+
+.icon {
+  width: 70rpx;
+  height: 70rpx;
+
+  border-radius: 18rpx;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  flex-shrink: 0;
+}
+
+.icon text {
+  font-size: 32rpx;
+}
+
+
+/* 不同颜色 */
+
+.icon.blue {
+  background-color: #eaf3ff;
+  color: #328EEB;
+}
+
+.icon.green {
+  background-color: #eaf9f0;
+  color: #35a86b;
+}
+
+.icon.yellow {
+  background-color: #fff7df;
+  color: #e6a400;
+}
+
+.icon.purple {
+  background-color: #f1ebff;
+  color: #8357d9;
+}
+
+.icon.red {
+  background-color: #fff0f0;
+  color: #e05252;
+}
+
+
+/* =========================
+   文字
+   ========================= */
+
+.item-text {
+  margin-left: 22rpx;
+
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: center;
+
+  min-width: 0;
+}
+
+.item-title {
+  display: block;
+
+  font-size: 29rpx;
+
+  color: #222222;
+
+  line-height: 42rpx;
+}
+
+.item-desc {
+  display: block;
+
+  margin-top: 5rpx;
+
+  font-size: 22rpx;
+
+  color: #999999;
+
+  line-height: 32rpx;
+}
+
+
+/* =========================
+   右侧箭头
+   ========================= */
+
+.arrow {
+  width: 40rpx;
+
+  text-align: center;
+
+  font-size: 45rpx;
+
+  color: #bbbbbb;
+
+  line-height: 45rpx;
+}
+
+
+/* =========================
+   登录状态
+   ========================= */
+
+.status {
+  font-size: 23rpx;
+
+  color: #328EEB;
+
+  padding: 8rpx 18rpx;
+
+  background-color: #edf6ff;
+
+  border-radius: 25rpx;
+}
+
+
+/* =========================
+   退出登录
+   ========================= */
+
+.logout-btn {
+  width: 100%;
+
+  height: 90rpx;
+
+  line-height: 90rpx;
+
+  margin: 15rpx 0 0;
+
+  padding: 0;
+
+  border-radius: 18rpx;
+
+  background-color: #ffffff;
+
+  color: #e05252;
+
+  font-size: 29rpx;
+
+  box-shadow: 0 5rpx 20rpx rgba(0, 0, 0, 0.04);
+}
+
+.logout-btn::after {
+  border: none;
+}
+
+
+/* =========================
+   版本信息
+   ========================= */
+
+.version {
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  justify-content: center;
+
+  margin-top: 45rpx;
+}
+
+.version text:first-child {
+  font-size: 22rpx;
+
+  color: #999999;
+
+  line-height: 35rpx;
+}
+
+.version text:last-child {
+  margin-top: 5rpx;
+
+  font-size: 20rpx;
+
+  color: #c0c0c0;
+
+  line-height: 30rpx;
+}

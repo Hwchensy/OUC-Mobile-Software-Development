@@ -1,0 +1,570 @@
+<!-- pages/my/my.wxml -->
+
+<!-- =========================
+     用户信息
+     ========================= -->
+
+     <view class="user-card">
+
+<!-- 已登录 -->
+
+<block wx:if="{{isLogin}}">
+
+  <image
+    class="avatar"
+    src="{{src}}"
+    mode="aspectFill"
+  ></image>
+
+  <view class="user-info">
+
+    <text class="nickname">
+      {{nickName}}
+    </text>
+
+    <text class="welcome">
+      欢迎来到中国海洋大学新闻网
+    </text>
+
+  </view>
+
+</block>
+
+
+<!-- 未登录 -->
+
+<block wx:else>
+
+  <view class="default-avatar">
+
+    <text>👤</text>
+
+  </view>
+
+  <view class="user-info">
+
+    <text class="nickname">
+      未登录
+    </text>
+
+    <text class="welcome">
+      登录后即可收藏新闻
+    </text>
+
+  </view>
+
+  <button
+    class="login-btn"
+    bindtap="showLogin"
+  >
+    立即登录
+  </button>
+
+</block>
+
+</view>
+
+
+
+<!-- =========================
+   我的收藏
+   ========================= -->
+
+<view class="favorite-section">
+
+<view class="section-header">
+
+  <view>
+
+    <text class="section-title">
+      我的收藏
+    </text>
+
+    <text class="section-subtitle">
+      MY FAVORITES
+    </text>
+
+  </view>
+
+  <view class="favorite-count">
+    {{number}}
+  </view>
+
+</view>
+
+
+<!-- 未登录 -->
+
+<view
+  wx:if="{{!isLogin}}"
+  class="empty-box"
+>
+
+  <text class="empty-icon">
+    🔒
+  </text>
+
+  <text class="empty-title">
+    暂无收藏
+  </text>
+
+  <text class="empty-desc">
+    登录后即可收藏喜欢的新闻
+  </text>
+
+</view>
+
+
+<!-- 已登录但没有收藏 -->
+
+<view
+  wx:elif="{{number == 0}}"
+  class="empty-box"
+>
+
+  <text class="empty-icon">
+    ☆
+  </text>
+
+  <text class="empty-title">
+    收藏夹还是空的
+  </text>
+
+  <text class="empty-desc">
+    浏览新闻并点击收藏按钮吧
+  </text>
+
+</view>
+
+
+<!-- 收藏列表 -->
+
+<view
+  wx:else
+  class="news-list"
+>
+
+  <view
+    class="news-item"
+    wx:for="{{newsList}}"
+    wx:key="id"
+    bindtap="goToDetail"
+    data-id="{{item.id}}"
+  >
+
+    <image
+      src="{{item.poster}}"
+      mode="aspectFill"
+    ></image>
+
+    <view class="news-info">
+
+      <text class="news-title">
+        {{item.title}}
+      </text>
+
+      <text class="news-date">
+        {{item.add_date}}
+      </text>
+
+    </view>
+
+  </view>
+
+</view>
+
+</view>
+
+
+
+<!-- =========================
+   功能菜单
+   ========================= -->
+
+<view class="menu-section">
+
+
+<!-- 设置 -->
+
+<view
+  class="menu-item"
+  bindtap="openSetting"
+>
+
+  <view class="menu-left">
+
+    <view class="menu-icon setting-icon">
+      ⚙
+    </view>
+
+    <view class="menu-text">
+
+      <text class="menu-title">
+        设置
+      </text>
+
+      <text class="menu-desc">
+        新闻与收藏管理
+      </text>
+
+    </view>
+
+  </view>
+
+  <text class="menu-arrow">
+    ›
+  </text>
+
+</view>
+
+
+<!-- 管理账号 -->
+
+<view
+  class="menu-item"
+  bindtap="openAccount"
+>
+
+  <view class="menu-left">
+
+    <view class="menu-icon account-icon">
+      👤
+    </view>
+
+    <view class="menu-text">
+
+      <text class="menu-title">
+        管理账号
+      </text>
+
+      <text class="menu-desc">
+        修改头像、昵称和登录状态
+      </text>
+
+    </view>
+
+  </view>
+
+  <text class="menu-arrow">
+    ›
+  </text>
+
+</view>
+
+</view>
+
+
+
+<!-- ==================================================
+   设置弹窗
+   ================================================== -->
+
+<view
+wx:if="{{showSettingPanel}}"
+class="popup-mask"
+>
+
+<view class="popup-panel">
+
+  <view class="popup-header">
+
+    <text class="popup-title">
+      设置
+    </text>
+
+    <text
+      class="popup-close"
+      bindtap="closeSetting"
+    >
+      ×
+    </text>
+
+  </view>
+
+
+  <view class="popup-line"></view>
+
+
+  <!-- 清空收藏 -->
+
+  <view
+    class="option-item"
+    bindtap="clearFavorites"
+  >
+
+    <view class="option-left">
+
+      <text class="option-title">
+        清空我的收藏
+      </text>
+
+      <text class="option-desc">
+        删除全部已收藏新闻
+      </text>
+
+    </view>
+
+    <text class="option-arrow">
+      ›
+    </text>
+
+  </view>
+
+
+  <view class="option-line"></view>
+
+
+  <!-- 当前版本 -->
+
+  <view class="option-item">
+
+    <view class="option-left">
+
+      <text class="option-title">
+        关于新闻网
+      </text>
+
+      <text class="option-desc">
+        中国海洋大学新闻网
+      </text>
+
+    </view>
+
+    <text class="version">
+      v1.0
+    </text>
+
+  </view>
+
+
+  <button
+    class="popup-button"
+    bindtap="closeSetting"
+  >
+    完成
+  </button>
+
+</view>
+
+</view>
+
+
+
+<!-- ==================================================
+   管理账号弹窗
+   ================================================== -->
+
+<view
+wx:if="{{showAccountPanel}}"
+class="popup-mask"
+>
+
+<view class="popup-panel account-panel">
+
+  <view class="popup-header">
+
+    <text class="popup-title">
+      管理账号
+    </text>
+
+    <text
+      class="popup-close"
+      bindtap="closeAccount"
+    >
+      ×
+    </text>
+
+  </view>
+
+
+  <view class="popup-line"></view>
+
+
+  <!-- 用户信息 -->
+
+  <view
+    wx:if="{{isLogin}}"
+    class="account-info"
+  >
+
+    <image
+      class="account-avatar"
+      src="{{src}}"
+      mode="aspectFill"
+    ></image>
+
+    <view class="account-name">
+
+      <text class="account-nickname">
+        {{nickName}}
+      </text>
+
+      <text class="account-status">
+        已登录
+      </text>
+
+    </view>
+
+  </view>
+
+
+  <!-- 修改头像昵称 -->
+
+  <view
+    wx:if="{{isLogin}}"
+    class="account-option"
+    bindtap="editAccount"
+  >
+
+    <text class="account-option-title">
+      修改个人信息
+    </text>
+
+    <text class="option-arrow">
+      ›
+    </text>
+
+  </view>
+
+
+  <!-- 未登录 -->
+
+  <view
+    wx:else
+    class="account-empty"
+  >
+
+    <text class="account-empty-icon">
+      👤
+    </text>
+
+    <text class="account-empty-title">
+      当前未登录
+    </text>
+
+    <text class="account-empty-desc">
+      登录后可以收藏新闻
+    </text>
+
+    <button
+      class="account-login-button"
+      bindtap="closeAccount"
+    >
+      去首页登录
+    </button>
+
+  </view>
+
+
+  <!-- 退出登录 -->
+
+  <button
+    wx:if="{{isLogin}}"
+    class="logout-button"
+    bindtap="logout"
+  >
+    退出登录
+  </button>
+
+
+  <button
+    class="popup-button"
+    bindtap="closeAccount"
+  >
+    完成
+  </button>
+
+</view>
+
+</view>
+
+
+
+<!-- ==================================================
+   登录 / 修改个人信息弹窗
+   ================================================== -->
+
+<view
+wx:if="{{showLoginPanel}}"
+class="popup-mask"
+>
+
+<view class="popup-panel login-panel">
+
+  <view class="popup-header">
+
+    <text class="popup-title">
+      {{isLogin ? '修改个人信息' : '获取头像和昵称'}}
+    </text>
+
+    <text
+      class="popup-close"
+      bindtap="cancelLogin"
+    >
+      ×
+    </text>
+
+  </view>
+
+
+  <text class="login-desc">
+    请选择头像并填写昵称
+  </text>
+
+
+  <!-- 选择头像 -->
+
+  <button
+    class="choose-avatar"
+    open-type="chooseAvatar"
+    bindchooseavatar="onChooseAvatar"
+  >
+
+    <image
+      wx:if="{{tempAvatar}}"
+      class="choose-avatar-img"
+      src="{{tempAvatar}}"
+      mode="aspectFill"
+    ></image>
+
+    <text wx:else>
+      选择头像
+    </text>
+
+  </button>
+
+
+  <!-- 输入昵称 -->
+
+  <input
+    class="nickname-input"
+    type="nickname"
+    placeholder="请输入昵称"
+    value="{{tempNickName}}"
+    bindinput="onNicknameInput"
+  />
+
+
+  <!-- 操作按钮 -->
+
+  <view class="login-actions">
+
+    <button
+      class="cancel-btn"
+      bindtap="cancelLogin"
+    >
+      取消
+    </button>
+
+    <button
+      class="confirm-btn"
+      bindtap="confirmLogin"
+    >
+      {{isLogin ? '保存修改' : '确定登录'}}
+    </button>
+
+  </view>
+
+</view>
+
+</view>

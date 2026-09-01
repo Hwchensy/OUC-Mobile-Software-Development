@@ -1,0 +1,253 @@
+<!-- pages/setting/setting.wxml -->
+
+<view class="page">
+
+<!-- 顶部标题 -->
+<view class="header">
+  <text class="header-title">设置</text>
+  <text class="header-subtitle">SETTINGS</text>
+</view>
+
+
+<!-- =========================
+     账号设置
+     ========================= -->
+<view class="group">
+
+  <text class="group-title">账号设置</text>
+
+  <view class="card">
+
+    <!-- 个人资料 -->
+    <view class="setting-item" bindtap="goProfile">
+
+      <view class="item-left">
+
+        <view class="icon blue">
+          <text>👤</text>
+        </view>
+
+        <view class="item-text">
+          <text class="item-title">个人资料</text>
+          <text class="item-desc">查看当前头像和昵称</text>
+        </view>
+
+      </view>
+
+      <text class="arrow">›</text>
+
+    </view>
+
+
+    <!-- 登录状态 -->
+    <view class="setting-item">
+
+      <view class="item-left">
+
+        <view class="icon green">
+          <text>✓</text>
+        </view>
+
+        <view class="item-text">
+
+          <text class="item-title">登录状态</text>
+
+          <text
+            wx:if="{{isLogin}}"
+            class="item-desc"
+          >
+            已登录
+          </text>
+
+          <text
+            wx:else
+            class="item-desc"
+          >
+            未登录
+          </text>
+
+        </view>
+
+      </view>
+
+      <text class="status">
+        {{isLogin ? '正常' : '未登录'}}
+      </text>
+
+    </view>
+
+  </view>
+
+</view>
+
+
+<!-- =========================
+     新闻设置
+     ========================= -->
+<view class="group">
+
+  <text class="group-title">新闻与阅读</text>
+
+  <view class="card">
+
+    <!-- 我的收藏 -->
+    <view
+      class="setting-item"
+      bindtap="goFavorites"
+    >
+
+      <view class="item-left">
+
+        <view class="icon yellow">
+          <text>★</text>
+        </view>
+
+        <view class="item-text">
+
+          <text class="item-title">
+            我的收藏
+          </text>
+
+          <text class="item-desc">
+            查看收藏的新闻
+          </text>
+
+        </view>
+
+      </view>
+
+      <text class="arrow">›</text>
+
+    </view>
+
+
+    <!-- 最近浏览 -->
+    <view
+      class="setting-item"
+      bindtap="goLogs"
+    >
+
+      <view class="item-left">
+
+        <view class="icon purple">
+          <text>◷</text>
+        </view>
+
+        <view class="item-text">
+
+          <text class="item-title">
+            最近浏览
+          </text>
+
+          <text class="item-desc">
+            查看最近阅读过的新闻
+          </text>
+
+        </view>
+
+      </view>
+
+      <text class="arrow">›</text>
+
+    </view>
+
+  </view>
+
+</view>
+
+
+<!-- =========================
+     其他
+     ========================= -->
+<view class="group">
+
+  <text class="group-title">其他</text>
+
+  <view class="card">
+
+    <!-- 关于 -->
+    <view
+      class="setting-item"
+      bindtap="showAbout"
+    >
+
+      <view class="item-left">
+
+        <view class="icon blue">
+          <text>i</text>
+        </view>
+
+        <view class="item-text">
+
+          <text class="item-title">
+            关于新闻网
+          </text>
+
+          <text class="item-desc">
+            中国海洋大学新闻网
+          </text>
+
+        </view>
+
+      </view>
+
+      <text class="arrow">›</text>
+
+    </view>
+
+
+    <!-- 清除最近浏览 -->
+    <view
+      class="setting-item"
+      bindtap="clearLogs"
+    >
+
+      <view class="item-left">
+
+        <view class="icon red">
+          <text>×</text>
+        </view>
+
+        <view class="item-text">
+
+          <text class="item-title">
+            清除浏览记录
+          </text>
+
+          <text class="item-desc">
+            删除最近浏览的新闻
+          </text>
+
+        </view>
+
+      </view>
+
+      <text class="arrow">›</text>
+
+    </view>
+
+  </view>
+
+</view>
+
+
+<!-- =========================
+     退出登录
+     ========================= -->
+
+<button
+  wx:if="{{isLogin}}"
+  class="logout-btn"
+  bindtap="logout"
+>
+  退出登录
+</button>
+
+
+<!-- 底部版本 -->
+<view class="version">
+  <text>我的新闻网</text>
+  <text>Version 1.0.0</text>
+</view>
+
+</view>
