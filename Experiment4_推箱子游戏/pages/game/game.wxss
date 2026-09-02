@@ -1,0 +1,637 @@
+/* =========================
+   整个游戏页面
+   ========================= */
+
+   .game-page {
+    min-height: 100vh;
+  
+    padding: 20rpx 30rpx 45rpx;
+  
+    box-sizing: border-box;
+  
+    background: #f4f8fc;
+  }
+  
+  
+  /* =========================
+     顶部
+     ========================= */
+  
+  .game-header {
+    width: 100%;
+  
+    padding: 18rpx 0 12rpx;
+  
+    text-align: center;
+  }
+  
+  
+  /* =========================
+     关卡标题
+     ========================= */
+  
+  .level-title {
+    font-size: 42rpx;
+  
+    font-weight: bold;
+  
+    color: #245b82;
+  }
+  
+  
+  .level-subtitle {
+    margin-top: 5rpx;
+  
+    font-size: 23rpx;
+  
+    color: #8a9aa8;
+  }
+  
+  
+  /* =========================
+     游戏数据区域
+     ========================= */
+  
+  .game-info {
+    width: 100%;
+  
+    display: flex;
+  
+    justify-content: center;
+  
+    align-items: center;
+  
+    margin-top: 16rpx;
+  
+    box-sizing: border-box;
+  }
+  
+  
+  /* =========================
+     单个数据卡片
+     ========================= */
+  
+  .info-item {
+    flex: 1;
+  
+    width: 0;
+  
+    height: 108rpx;
+  
+    padding: 10rpx 4rpx;
+  
+    margin: 0 5rpx;
+  
+    box-sizing: border-box;
+  
+    background: #ffffff;
+  
+    border-radius: 16rpx;
+  
+    box-shadow: 0 5rpx 18rpx rgba(65, 110, 140, 0.08);
+  
+    display: flex;
+  
+    flex-direction: column;
+  
+    align-items: center;
+  
+    justify-content: center;
+  
+    /*
+     * 防止数字被白框裁掉
+     */
+    overflow: visible;
+  }
+  
+  
+  /* =========================
+     数据名称
+     ========================= */
+  
+  .info-label {
+    display: block;
+  
+    width: 100%;
+  
+    text-align: center;
+  
+    font-size: 21rpx;
+  
+    color: #8a9aa8;
+  
+    line-height: 30rpx;
+  
+    white-space: nowrap;
+  
+    box-sizing: border-box;
+  
+    /*
+     * 文字向上提一点
+     */
+    transform: translateY(-4rpx);
+  }
+  
+  
+  /* =========================
+     数据数字
+     ========================= */
+  
+  .info-value {
+    display: block;
+  
+    width: 100%;
+  
+    text-align: center;
+  
+    /*
+     * 数字向上靠
+     */
+    margin-top: -5rpx;
+  
+    font-size: 32rpx;
+  
+    font-weight: bold;
+  
+    color: #2f80ed;
+  
+    line-height: 40rpx;
+  
+    white-space: nowrap;
+  
+    box-sizing: border-box;
+  
+    /*
+     * 数字向上提
+     */
+    transform: translateY(-10rpx);
+  }
+  
+  
+  /* =========================
+     游戏地图外框
+     ========================= */
+  
+  .game-board {
+    width: 320px;
+  
+    height: 320px;
+  
+    margin: 22rpx auto 12rpx;
+  
+    background: #ffffff;
+  
+    border-radius: 18px;
+  
+    overflow: hidden;
+  
+    box-shadow: 0 10rpx 30rpx rgba(65, 110, 140, 0.14);
+  
+    border: 6rpx solid #ffffff;
+  
+    box-sizing: border-box;
+  }
+  
+  
+  /* =========================
+     Canvas
+     ========================= */
+  
+  .game-canvas {
+    width: 320px;
+  
+    height: 320px;
+  
+    display: block;
+  }
+  
+  
+  /* =========================
+     游戏状态
+     ========================= */
+  
+  .game-status {
+    width: 100%;
+  
+    text-align: center;
+  
+    margin-top: 8rpx;
+  }
+  
+  
+  /* =========================
+     剩余目标
+     ========================= */
+  
+  .target-info {
+    font-size: 26rpx;
+  
+    color: #536b7a;
+  
+    font-weight: 500;
+  
+    line-height: 36rpx;
+  }
+  
+  
+  .target-info text {
+    color: #2f80ed;
+  
+    font-weight: bold;
+  
+    margin-left: 4rpx;
+  }
+  
+  
+  /* =========================
+     游戏提示
+     ========================= */
+  
+  .game-tip {
+    margin-top: 7rpx;
+  
+    font-size: 22rpx;
+  
+    color: #8a9aa8;
+  
+    line-height: 32rpx;
+  
+    min-height: 32rpx;
+  }
+  
+  
+  /* =========================
+     方向键整体
+     ========================= */
+  
+  .control-panel {
+    width: 100%;
+  
+    display: flex;
+  
+    flex-direction: column;
+  
+    align-items: center;
+  
+    margin-top: 13rpx;
+  }
+  
+  
+  /* =========================
+     上方向区域
+     ========================= */
+  
+  .direction-up {
+    width: 48px;
+  
+    height: 45px;
+  
+    display: flex;
+  
+    justify-content: center;
+  
+    align-items: center;
+  }
+  
+  
+  /* =========================
+     左下右区域
+     ========================= */
+  
+  .direction-row {
+    width: 162px;
+  
+    height: 45px;
+  
+    display: flex;
+  
+    justify-content: center;
+  
+    align-items: center;
+  }
+  
+  
+  /* =========================
+     方向按钮
+     ========================= */
+  
+  .direction-button {
+    width: 48px !important;
+  
+    min-width: 48px !important;
+  
+    max-width: 48px !important;
+  
+    height: 42px !important;
+  
+    min-height: 42px !important;
+  
+    max-height: 42px !important;
+  
+    margin: 3px;
+  
+    padding: 0;
+  
+    box-sizing: border-box;
+  
+    line-height: 42px;
+  
+    text-align: center;
+  
+    background: #ffffff;
+  
+    color: #2f80ed;
+  
+    border-radius: 12px;
+  
+    font-size: 22px;
+  
+    box-shadow: 0 4rpx 12rpx rgba(65, 110, 140, 0.12);
+  
+    border: 1px solid #e6edf3;
+  }
+  
+  
+  /* =========================
+     方向键点击效果
+     ========================= */
+  
+  .direction-button:active {
+    background: #eaf3ff;
+  
+    transform: scale(0.94);
+  }
+  
+  
+  /* =========================
+     去掉 button 默认边框
+     ========================= */
+  
+  button::after {
+    border: none;
+  }
+  
+  
+  /* =========================
+     撤销 / 重新开始
+     ========================= */
+  
+  .function-panel {
+    width: 100%;
+  
+    display: flex;
+  
+    justify-content: center;
+  
+    align-items: center;
+  
+    margin-top: 17rpx;
+  }
+  
+  
+  /* =========================
+     功能按钮
+     ========================= */
+  
+  .function-button {
+    width: 210rpx;
+  
+    height: 64rpx;
+  
+    margin: 0 7rpx;
+  
+    padding: 0;
+  
+    line-height: 64rpx;
+  
+    font-size: 24rpx;
+  
+    border-radius: 32rpx;
+  
+    box-sizing: border-box;
+  }
+  
+  
+  /* =========================
+     撤销按钮
+     ========================= */
+  
+  .undo-button {
+    background: #eaf3ff;
+  
+    color: #2f80ed;
+  
+    border: 1px solid #d8e9fa;
+  }
+  
+  
+  /* =========================
+     撤销不可用
+     ========================= */
+  
+  .undo-button[disabled] {
+    background: #eeeeee;
+  
+    color: #aaaaaa;
+  
+    border: 1px solid #dddddd;
+  
+    box-shadow: none;
+  }
+  
+  
+  /* =========================
+     重新开始
+     ========================= */
+  
+  .restart-button {
+    background: #2f80ed;
+  
+    color: #ffffff;
+  
+    border: none;
+  
+    box-shadow: 0 5rpx 15rpx rgba(47, 128, 237, 0.22);
+  }
+  
+  
+  /* =========================
+     炸弹技能区域
+     ========================= */
+  
+  .bomb-panel {
+    width: 100%;
+  
+    display: flex;
+  
+    flex-direction: column;
+  
+    align-items: center;
+  
+    margin-top: 12rpx;
+  }
+  
+  
+  /* =========================
+     炸弹按钮
+     ========================= */
+  
+  .bomb-button {
+    width: 300rpx;
+  
+    height: 62rpx;
+  
+    line-height: 62rpx;
+  
+    padding: 0;
+  
+    margin: 0;
+  
+    box-sizing: border-box;
+  
+    background: #fff4e8;
+  
+    color: #e67e22;
+  
+    border: 1px solid #f5d6b3;
+  
+    border-radius: 31rpx;
+  
+    font-size: 24rpx;
+  
+    box-shadow: 0 4rpx 12rpx rgba(230, 126, 34, 0.12);
+  }
+  
+  
+  /* =========================
+     炸弹按钮点击效果
+     ========================= */
+  
+  .bomb-button:active {
+    background: #ffe8d0;
+  
+    transform: scale(0.96);
+  }
+  
+  
+  /* =========================
+     炸弹已经使用
+     ========================= */
+  
+  .bomb-button[disabled] {
+    background: #eeeeee;
+  
+    color: #aaaaaa;
+  
+    border: 1px solid #dddddd;
+  
+    box-shadow: none;
+  }
+  
+  
+  /* =========================
+     炸弹说明
+     ========================= */
+  
+  .bomb-tip {
+    margin-top: 5rpx;
+  
+    font-size: 19rpx;
+  
+    color: #9aa7b2;
+  
+    line-height: 28rpx;
+  }
+  
+  
+  /* =========================
+     底部按钮
+     ========================= */
+  
+  .bottom-panel {
+    width: 100%;
+  
+    display: flex;
+  
+    justify-content: center;
+  
+    align-items: center;
+  
+    margin-top: 10rpx;
+  }
+  
+  
+  /* =========================
+     提示 / 返回按钮
+     ========================= */
+  
+  .small-button {
+    width: 190rpx;
+  
+    height: 58rpx;
+  
+    margin: 0 6rpx;
+  
+    padding: 0;
+  
+    line-height: 58rpx;
+  
+    font-size: 22rpx;
+  
+    color: #607887;
+  
+    background: transparent;
+  
+    border: none;
+  }
+  
+  
+  /* =========================
+     小按钮点击效果
+     ========================= */
+  
+  .small-button:active {
+    color: #2f80ed;
+  
+    opacity: 0.7;
+  }
+  
+  
+  /* =========================
+     下一关按钮
+     ========================= */
+  
+  .next-button {
+    width: 440rpx;
+  
+    height: 68rpx;
+  
+    line-height: 68rpx;
+  
+    margin: 15rpx auto 0;
+  
+    padding: 0;
+  
+    background: #27ae60;
+  
+    color: #ffffff;
+  
+    border-radius: 34rpx;
+  
+    font-size: 27rpx;
+  
+    box-shadow: 0 5rpx 15rpx rgba(39, 174, 96, 0.2);
+  
+    display: block;
+  }
+  
+  
+  /* =========================
+     下一关点击效果
+     ========================= */
+  
+  .next-button:active {
+    background: #219653;
+  
+    transform: scale(0.97);
+  }

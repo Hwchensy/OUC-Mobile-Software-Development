@@ -1,0 +1,314 @@
+/* =========================
+   整个页面
+   ========================= */
+
+   .page {
+    position: relative;
+  
+    min-height: 100vh;
+  
+    padding: 30rpx;
+  
+    box-sizing: border-box;
+  
+    background: #F5F7FA;
+  
+    overflow: hidden;
+  }
+  
+  
+  /* =========================
+     游戏背景图片
+     使用 image 代替 WXSS
+     background-image
+     ========================= */
+  
+  .page-bg {
+    position: absolute;
+  
+    left: 0;
+    top: 0;
+  
+    width: 100%;
+    height: 100%;
+  
+    z-index: 0;
+  
+    opacity: 0.45;
+  }
+  
+  
+  /* =========================
+     页面主要内容
+     ========================= */
+  
+  .page-content {
+    position: relative;
+  
+    z-index: 1;
+  
+    width: 100%;
+  }
+  
+  
+  /* =========================
+     顶部标题
+     ========================= */
+  
+  .header {
+    text-align: center;
+  
+    padding: 45rpx 20rpx 35rpx;
+  }
+  
+  
+  .title {
+    font-size: 52rpx;
+  
+    font-weight: bold;
+  
+    color: #2F80ED;
+  }
+  
+  
+  .subtitle {
+    margin-top: 16rpx;
+  
+    font-size: 26rpx;
+  
+    color: #7A869A;
+  }
+  
+  
+  /* =========================
+     游戏说明
+     ========================= */
+  
+  .info-card {
+    position: relative;
+  
+    background: rgba(255, 255, 255, 0.94);
+  
+    border-radius: 24rpx;
+  
+    padding: 30rpx;
+  
+    box-sizing: border-box;
+  
+    box-shadow: 0 8rpx 30rpx rgba(0, 0, 0, 0.06);
+  
+    transition: transform 0.15s;
+  }
+  
+  
+  /* 点击游戏说明 */
+  
+  .info-card:active {
+    transform: scale(0.98);
+  
+    opacity: 0.9;
+  }
+  
+  
+  .info-title {
+    font-size: 32rpx;
+  
+    font-weight: bold;
+  
+    color: #333333;
+  }
+  
+  
+  .info-text {
+    margin-top: 14rpx;
+  
+    font-size: 26rpx;
+  
+    line-height: 1.6;
+  
+    color: #666666;
+  }
+  
+  
+  /* =========================
+     查看详细规则
+     ========================= */
+  
+  .info-detail {
+    margin-top: 12rpx;
+  
+    font-size: 23rpx;
+  
+    color: #2F80ED;
+  
+    text-align: right;
+  }
+  
+  
+  /* =========================
+     关卡标题
+     ========================= */
+  
+  .section-title {
+    margin: 40rpx 0 25rpx;
+  
+    font-size: 34rpx;
+  
+    font-weight: bold;
+  
+    color: #333333;
+  }
+  
+  
+  /* =========================
+     关卡列表
+     ========================= */
+  
+  .level-list {
+    display: flex;
+  
+    flex-wrap: wrap;
+  
+    justify-content: space-between;
+  }
+  
+  
+  /* =========================
+     单个关卡
+     ========================= */
+  
+  .level-card {
+    position: relative;
+  
+    width: 47%;
+  
+    margin-bottom: 30rpx;
+  
+    padding: 20rpx;
+  
+    box-sizing: border-box;
+  
+    background: rgba(255, 255, 255, 0.95);
+  
+    border-radius: 24rpx;
+  
+    box-shadow: 0 8rpx 25rpx rgba(0, 0, 0, 0.06);
+  
+    transition: transform 0.15s;
+  }
+  
+  
+  /* 点击效果 */
+  
+  .level-card:active {
+    transform: scale(0.96);
+  }
+  
+  
+  /* =========================
+     解锁星星
+     ========================= */
+  
+  .level-star {
+    position: absolute;
+  
+    top: 16rpx;
+  
+    right: 18rpx;
+  
+    z-index: 5;
+  
+    width: 48rpx;
+  
+    height: 48rpx;
+  
+    line-height: 48rpx;
+  
+    text-align: center;
+  
+    font-size: 34rpx;
+  
+    color: #F5B82E;
+  
+    background: rgba(255, 255, 255, 0.92);
+  
+    border-radius: 50%;
+  
+    box-shadow: 0 4rpx 12rpx rgba(0, 0, 0, 0.08);
+  }
+  
+  
+  /* =========================
+     关卡图片
+     ========================= */
+  
+  .level-image-box {
+    width: 100%;
+  
+    height: 280rpx;
+  
+    display: flex;
+  
+    justify-content: center;
+  
+    align-items: center;
+  
+    background: #F4F7FA;
+  
+    border-radius: 18rpx;
+  
+    overflow: hidden;
+  }
+  
+  
+  /* =========================
+     关卡图片
+     保持你自己的四张图片
+     ========================= */
+  
+  .level-image {
+    width: 100%;
+  
+    height: 100%;
+  }
+  
+  
+  /* =========================
+     关卡名称
+     ========================= */
+  
+  .level-name {
+    margin-top: 18rpx;
+  
+    text-align: center;
+  
+    font-size: 32rpx;
+  
+    font-weight: bold;
+  
+    color: #333333;
+  }
+  
+  
+  /* =========================
+     点击提示
+     ========================= */
+  
+  .level-tip {
+    margin-top: 8rpx;
+  
+    text-align: center;
+  
+    font-size: 24rpx;
+  
+    color: #999999;
+  }
+  
+  
+  /* =========================
+     button 默认边框
+     ========================= */
+  
+  button::after {
+    border: none;
+  }

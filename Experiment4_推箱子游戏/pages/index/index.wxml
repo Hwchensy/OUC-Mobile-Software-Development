@@ -1,0 +1,130 @@
+<view class="page">
+
+<!-- =========================
+     页面背景图片
+     ========================= -->
+
+<image
+  class="page-bg"
+  src="/images/game-bg.png"
+  mode="aspectFill"
+></image>
+
+
+<!-- =========================
+     页面主要内容
+     ========================= -->
+
+<view class="page-content">
+
+
+  <!-- =========================
+       顶部标题
+       ========================= -->
+
+  <view class="header">
+
+    <view class="title">
+      趣味推箱子
+    </view>
+
+    <view class="subtitle">
+      动动脑筋，把所有箱子推到终点
+    </view>
+
+  </view>
+
+
+  <!-- =========================
+       游戏说明
+       ========================= -->
+
+  <view
+    class="info-card"
+    bindtap="showGameRules"
+  >
+
+    <view class="info-title">
+      🎮 游戏说明
+    </view>
+
+    <view class="info-text">
+      控制小鸟移动，将所有箱子推到绿色终点。
+    </view>
+
+    <view class="info-detail">
+      点击查看详细内容 →
+    </view>
+
+  </view>
+
+
+  <!-- =========================
+       选择关卡
+       ========================= -->
+
+  <view class="section-title">
+    选择关卡
+  </view>
+
+
+  <!-- =========================
+       关卡列表
+       ========================= -->
+
+  <view class="level-list">
+
+    <view
+      class="level-card"
+      wx:for="{{levels}}"
+      wx:key="index"
+      data-level="{{index}}"
+      bindtap="chooseLevel"
+    >
+
+      <!-- 解锁星星 -->
+
+      <view class="level-star">
+
+        {{item.unlocked ? '★' : '☆'}}
+
+      </view>
+
+
+      <!-- =========================
+           关卡图片
+           注意：这里还是你的原图片
+           ========================= -->
+
+      <view class="level-image-box">
+
+        <image
+          class="level-image"
+          src="{{item.image}}"
+          mode="aspectFit"
+        />
+
+      </view>
+
+
+      <!-- 关卡名称 -->
+
+      <view class="level-name">
+        {{item.name}}
+      </view>
+
+
+      <!-- 点击提示 -->
+
+      <view class="level-tip">
+        点击进入
+      </view>
+
+    </view>
+
+  </view>
+
+
+</view>
+
+</view>

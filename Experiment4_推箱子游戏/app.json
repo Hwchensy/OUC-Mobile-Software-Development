@@ -1,0 +1,13 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/game/game"
+  ],
+  "window": {
+    "navigationBarBackgroundColor": "#4A90E2",
+    "navigationBarTextStyle": "white",
+    "navigationBarTitleText": "趣味推箱子",
+    "backgroundColor": "#F5F7FA"
+  },
+  "style": "v2"
+}

@@ -1,0 +1,274 @@
+<!-- ================================
+     推箱子游戏页面
+     ================================ -->
+
+     <view class="game-page">
+
+<!-- =========================
+     顶部关卡信息
+     ========================= -->
+
+<view class="game-header">
+
+  <!-- 关卡名称 -->
+  <view class="level-title">
+    第{{level + 1}}关
+  </view>
+
+  <!-- 关卡副标题 -->
+  <view class="level-subtitle">
+    {{levelName}}
+  </view>
+
+
+  <!-- =========================
+       游戏数据
+       ========================= -->
+
+  <view class="game-info">
+
+    <!-- 当前步数 -->
+    <view class="info-item">
+
+      <text class="info-label">
+        当前步数
+      </text>
+
+      <text class="info-value">
+        {{steps}}
+      </text>
+
+    </view>
+
+
+    <!-- 最佳步数 -->
+    <view class="info-item">
+
+      <text class="info-label">
+        最佳步数
+      </text>
+
+      <text class="info-value">
+        {{bestScore > 0 ? bestScore : '--'}}
+      </text>
+
+    </view>
+
+
+    <!-- 推箱次数 -->
+    <view class="info-item">
+
+      <text class="info-label">
+        推箱次数
+      </text>
+
+      <text class="info-value">
+        {{pushCount}}
+      </text>
+
+    </view>
+
+  </view>
+
+</view>
+
+
+<!-- =========================
+     游戏地图
+     ========================= -->
+
+<view class="game-board">
+
+  <canvas
+    canvas-id="myCanvas"
+    class="game-canvas"
+    bindtouchstart="touchStart"
+    bindtouchend="touchEnd"
+  ></canvas>
+
+</view>
+
+
+<!-- =========================
+     游戏状态
+     ========================= -->
+
+<view class="game-status">
+
+  <!-- 剩余目标 -->
+  <view class="target-info">
+
+    🎯 剩余目标：
+
+    <text>
+      {{remainingTargets}}
+    </text>
+
+  </view>
+
+
+  <!-- 游戏提示 -->
+  <view class="game-tip">
+
+    {{currentTip}}
+
+  </view>
+
+</view>
+
+
+<!-- =========================
+     方向键
+     ========================= -->
+
+<view class="control-panel">
+
+  <!-- 上 -->
+  <view class="direction-up">
+
+    <button
+      class="direction-button"
+      bindtap="up"
+    >
+      ↑
+    </button>
+
+  </view>
+
+
+  <!-- 左 下 右 -->
+  <view class="direction-row">
+
+    <button
+      class="direction-button"
+      bindtap="left"
+    >
+      ←
+    </button>
+
+
+    <button
+      class="direction-button"
+      bindtap="down"
+    >
+      ↓
+    </button>
+
+
+    <button
+      class="direction-button"
+      bindtap="right"
+    >
+      →
+    </button>
+
+  </view>
+
+</view>
+
+
+<!-- =========================
+     功能按钮
+     ========================= -->
+
+<view class="function-panel">
+
+  <!-- 撤销 -->
+  <button
+    class="function-button undo-button"
+    bindtap="undo"
+    disabled="{{!canUndo}}"
+  >
+    ↶ 撤销
+  </button>
+
+
+  <!-- 重新开始 -->
+  <button
+    class="function-button restart-button"
+    bindtap="restartGame"
+  >
+    ↻ 重新开始
+  </button>
+
+</view>
+
+
+<!-- =========================
+     炸弹技能
+     ========================= -->
+
+<view class="bomb-panel">
+
+  <!-- 炸弹按钮 -->
+
+  <button
+    class="bomb-button"
+    bindtap="useBomb"
+    disabled="{{bombUsed}}"
+  >
+
+    {{bombUsed ? "💣 炸弹已使用" : "💣 使用炸弹"}}
+
+  </button>
+
+
+  <!-- 炸弹说明 -->
+
+  <text class="bomb-tip">
+
+    每关一次机会，可炸开附近墙壁
+
+  </text>
+
+</view>
+
+
+<!-- =========================
+     提示 / 返回首页
+     ========================= -->
+
+<view class="bottom-panel">
+
+  <!-- 游戏提示 -->
+
+  <button
+    class="small-button"
+    bindtap="showHint"
+  >
+
+    💡 游戏提示
+
+  </button>
+
+
+  <!-- 返回首页 -->
+
+  <button
+    class="small-button"
+    bindtap="backHome"
+  >
+
+    🏠 返回首页
+
+  </button>
+
+</view>
+
+
+<!-- =========================
+     下一关
+     ========================= -->
+
+<button
+  wx:if="{{gameWin && level < 3}}"
+  class="next-button"
+  bindtap="nextLevel"
+>
+
+  下一关 →
+
+</button>
+
+
+</view>
